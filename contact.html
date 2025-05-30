@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tekken 7 Gamerz - Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Tekken 7 Gamerz</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/videos.html">Videos</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contact Us</h2>
+    <p class="center-text">Reach out through the info below or fill out the contact form.</p>
+
+    <ul class="contact-info">
+      <li><strong>Name:</strong> Vidit</li>
+      <li><strong>Email:</strong> <a href="mailto:sharmavidit2510@gmail.com">sharmavidit2510@gmail.com</a></li>
+      <li><strong>Phone:</strong> <a href="tel:+919460924542">9460924542</a></li>
+      <li><strong>Instagram:</strong> <a href="https://www.instagram.com/vidit1063/" target="_blank">@vidit1063</a></li>
+    </ul>
+
+    <form id="contactForm" action="/contact" method="POST">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p id="formStatus"></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tekken 7 Gamerz</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
