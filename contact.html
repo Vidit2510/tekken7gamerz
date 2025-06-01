@@ -1,53 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tekken 7 Gamerz - Contact</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Tekken 7 Gamerz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .instagram-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        .instagram-link:hover {
+            transform: translateY(-2px);
+            color: #E4405F;
+        }
+        
+        .instagram-logo {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+        
+        .instagram-link:hover .instagram-logo {
+            transform: scale(1.1);
+        }
+        
+        .footer-social .instagram-link {
+            color: #fff;
+        }
+        
+        .footer-social .instagram-link:hover {
+            color: #E4405F;
+        }
+
+        .contact-icon-instagram {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Tekken 7 Gamerz</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/videos.html">Videos</a>
-      <a href="/contact.html">Contact</a>
-    </nav>
-  </header>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Tekken 7 Gamerz</h1>
+                    <span class="tagline">Professional Gaming Hub</span>
+                </div>
+                <nav class="nav">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/videos.html" class="nav-link">Videos</a>
+                    <a href="/contact.html" class="nav-link active">Contact</a>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-  <main>
-    <h2>Contact Us</h2>
-    <p class="center-text">Reach out through the info below or fill out the contact form.</p>
+    <main class="main">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Get In Touch</h1>
+                <p class="page-subtitle">Let's connect and discuss gaming, collaborations, or any questions you have</p>
+            </div>
+        </section>
 
-    <ul class="contact-info">
-      <li><strong>Name:</strong> Vidit</li>
-      <li><strong>Email:</strong> <a href="mailto:sharmavidit2510@gmail.com">sharmavidit2510@gmail.com</a></li>
-      <li><strong>Phone:</strong> <a href="tel:+919460924542">9460924542</a></li>
-      <li><strong>Instagram:</strong> <a href="https://www.instagram.com/vidit1063/" target="_blank">@vidit1063</a></li>
-    </ul>
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Contact Information</h2>
+                        <p>Ready to connect? Reach out through any of the channels below or use our contact form.</p>
+                        
+                        <div class="contact-cards">
+                            <div class="contact-card">
+                                <div class="contact-icon">👤</div>
+                                <div class="contact-details">
+                                    <h3>Creator</h3>
+                                    <p>Vidit</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-details">
+                                    <h3>Email</h3>
+                                    <a href="mailto:sharmavidit2510@gmail.com">sharmavidit2510@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <div class="contact-icon">📱</div>
+                                <div class="contact-details">
+                                    <h3>Phone</h3>
+                                    <a href="tel:+919460924542">+91 9460924542</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" alt="Instagram" class="contact-icon-instagram">
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Instagram</h3>
+                                    <a href="https://www.instagram.com/vidit1063/" target="_blank" class="instagram-link">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" alt="Instagram" class="instagram-logo">
+                                        @vidit1063
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <form id="contactForm" action="/contact" method="POST">
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" required />
+                    <div class="contact-form-wrapper">
+                        <h2>Send a Message</h2>
+                        <form id="contactForm" class="contact-form" action="/contact" method="POST">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            </div>
 
-      <label for="email">Your Email:</label>
-      <input type="email" id="email" name="email" required />
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            </div>
 
-      <label for="message">Your Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a topic</option>
+                                    <option value="collaboration">Collaboration</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="gaming">Gaming Discussion</option>
+                                    <option value="business">Business Inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
 
-      <button type="submit">Send Message</button>
-    </form>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Tell us what's on your mind..."></textarea>
+                            </div>
 
-    <p id="formStatus"></p>
-  </main>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading" style="display: none;">Sending...</span>
+                            </button>
+                        </form>
+                        
+                        <div id="formStatus" class="form-status"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Tekken 7 Gamerz</p>
-  </footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Tekken 7 Gamerz</h3>
+                    <p>Professional Gaming Entertainment</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/videos.html">Videos</a>
+                    <a href="/contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/vidit1063/" target="_blank" class="instagram-link">
+                        <svg class="instagram-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="url(#instagram-gradient-footer)"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="white"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="instagram-gradient-footer" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#833ab4"/>
+                                    <stop offset="50%" style="stop-color:#fd1d1d"/>
+                                    <stop offset="100%" style="stop-color:#fcb045"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        Instagram
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tekken 7 Gamerz. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
