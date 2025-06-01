@@ -1,30 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tekken 7 Gamerz - Videos</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Videos - Tekken 7 Gamerz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Tekken 7 Gamerz</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/videos.html">Videos</a>
-      <a href="/contact.html">Contact</a>
-    </nav>
-  </header>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Tekken 7 Gamerz</h1>
+                    <span class="tagline">Professional Gaming Hub</span>
+                </div>
+                <nav class="nav">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/videos.html" class="nav-link active">Videos</a>
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-  <main>
-    <h2>Latest Videos</h2>
-    <div id="videos-container" class="video-list"></div>
-  </main>
+    <main class="main">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Gaming Videos</h1>
+                <p class="page-subtitle">Professional gaming content, tutorials, and epic gameplay moments</p>
+            </div>
+        </section>
 
-  <footer>
-    <p>&copy; 2025 Tekken 7 Gamerz</p>
-  </footer>
+        <section class="videos-section">
+            <div class="container">
+                <div class="videos-filters">
+                    <button class="filter-btn active" data-filter="all">All Videos</button>
+                </div>
+                
+                <div class="loading-indicator" id="loadingIndicator">
+                    <div class="spinner"></div>
+                    <p>Loading videos...</p>
+                </div>
+                
+                <div id="videos-container" class="videos-grid"></div>
+                
+                <div class="no-videos" id="noVideos" style="display: none;">
+                    <h3>No videos available</h3>
+                    <p>Check back later for new content!</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <script src="script.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Tekken 7 Gamerz</h3>
+                    <p>Professional Gaming Entertainment</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/videos.html">Videos</a>
+                    <a href="/contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/vidit1063/" target="_blank">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tekken 7 Gamerz. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
